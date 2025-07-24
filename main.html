@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Statiistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding : 0;
+        box-sizing: border;
+    }
+
+    body {
+        background: yellowgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 24px;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    main > div {
+        border: 1px solid black;
+        width: 300px;
+        text-align: center;
+        padding: 2rem;
+    }
+
+</style>
+<body>
+
+    <main>
+        <div class="divBlock">
+            <i class="fas fa-toolbox"></i>
+            <p id="years">0</p>
+            <p>Years Experience</p>
+        </div>
+        <div class="divBlock">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p id="website">0</p>
+            <p>Websites Made</p>
+        </div>
+        <div class="divBlock">
+            <i class="fab fa-apple"></i>
+            <p id="app">0</p>
+            <p>Apps Made</p>
+
+        </div>
+    </main>
+</body>
+
+
+<script> 
+
+    window.addEventListener("load", interval);
+
+    const years = document.getElementById("years");
+    const website = document.getElementById("website");
+    const app = document.getElementById("app");
+
+    function interval(){
+        alert("hello world");
+        const numYear = 200;
+        let increase1 = 0;
+        let increase2 = 0;
+        let increase3 = 0;
+        const interval = setInterval(() => {
+            years.innerText = `${increase1}`;
+            increase1++;
+            if(increase1 > numYear) {
+                clearInterval(interval);
+            }
+        }, 20);
+
+        const interval2 = setInterval(() => {
+            website.innerText = `${increase2}`;
+            increase2++;
+            if(increase2 > 240){
+                clearInterval(interval2);
+            }
+        }, 20);
+
+        const interval3 = setInterval(() => {
+            app.innerText = `${increase3}`;
+            increase3++;
+            if(increase3 > 50){
+                clearInterval(interval3);
+            }
+        }, 25);
+
+
+    }
+</script>
+</html>
