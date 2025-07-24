@@ -1,0 +1,29 @@
+    * {
+        margin: 0;
+        padding : 0;
+        box-sizing: border;
+    }
+
+    body {
+        background: yellowgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 24px;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    main > div {
+        border: 1px solid black;
+        width: 300px;
+        text-align: center;
+        padding: 2rem;
+    }
