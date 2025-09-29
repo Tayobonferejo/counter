@@ -5,7 +5,7 @@
     const app = document.getElementById("app");
 
     function interval(){
-        alert("hello world");
+        alert("hello world");// testing interval
         const numYear = 200;
         let increase1 = 0;
         let increase2 = 0;
